@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>CRICKET</title>
+<style type = "text/css" >
+	form { color : white; 
+		font-weight : bold;
+		font-size : 18px;
+		text-align : center;
+	}
+	</style>
+	
+	
+	<script language="JavaScript" type="text/JavaScript">
+	
+	function sendrecord()
+	{
+	dname=document.forms[0].nm.value;
+	id=document.forms[0].eid.value;
+	dctlist=document.forms[0].ct.selectedIndex;
+	
+	phno=document.forms[0].pno.value;
+	data=window.open("",""," height = 300,width = 350 ");
+	data.document.write("<h2>New Record</h2>");
+	data.document.write("<b>Name:</b>",dname);
+
+	data.document.write("<br><b>E-mail Id :</b>",id);
+	if(document.forms[0].g[0].checked)
+	{
+	data.document.write("<br><b>Gender:</b> Male");
+	}
+	else
+	{
+	data.document.write("<br><b>Gender:</b> Female");
+	}
+	data.document.write("<br><b>Ph Number:</b>",phno);
+	data.document.write("<br><b> Favorite Team : </b>",dctop[dctlist].text);
+	}
+	</script>
+
+	
+</head>
+<body background="wood.jpg">
+		<form><h2>
+				Name : <input type="text" name="nm" id="dname" ><br>
+				<br/>
+				Male <input type="radio" id="male" value="Male" name="g">
+				Female <input type="radio" id="female" value="Female" name="g"><br>
+				<br/>
+
+				Email Id : <input type="text" id="id" name="eid"><br>
+				<br/>
+				
+				Age : <input type = "number" name = "Age" /><br>
+				<br/>
+				Contact No. :
+				<select>
+				<option>+91</option>
+				
+				</select>
+				<input type="number" id="phno" name="pno"><br>
+				<br/>
+				
+				Who is your Favorite Team ?
+				<select name="ct" id="dctlist">
+				<option value = "1" > </option>
+				<option value = "2" > India </option>
+				<option value = "3" > Australia </option>
+				<option value = "4" > South Africa </option>
+				<option value = "5" > Sri Lanka </option>
+				<option value = "6" > England </option>
+				<option value = "7" > West Indies </option>
+				<option value = "8" > Pakistan </option>
+				<option value = "9" > Delhi Daredevils </option>
+				<option value = "10" > Rajasthan Royals </option>
+				<option value = "11" > Mumbai Indians </option>
+				<option value = "12" > Chennai Super Kings </option>
+				<option value = "13" > Kings X1 Punjab </option>
+				<option value = "14" > Royal Challengers Banglore </option>
+				<option value = "15" > KKR </option>
+				<option value = "16" > Sun Risers Hyderabad </option>
+				</select><br>
+				<br/>
+				
+				Why do you like it :
+				<br/>
+				<textarea name = "write" rows = "8" cols = "40" ></textarea><br>
+				<br/>
+				
+				<input type="button" value="Submit" onClick="sendrecord()" onKeyPress="sendrecord()"/>
+				</h2></form>
+
+		
+</body>
+</html>
